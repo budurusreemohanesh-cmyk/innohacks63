@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoHack 2026 - Where Ideas Become Reality | March 15-16, 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css?v=2">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                InnoHack 2026
+            </div>
+            <ul>
+                <li><a href="#about" style="color: var(--gdsc-red)">About</a></li>
+                <li><a href="#timeline" style="color: var(--gdsc-blue)">Timeline</a></li>
+                <li><a href="#prizes" style="color: var(--gdsc-green)">Prizes</a></li>
+                <li><a href="#projects" style="color: var(--gdsc-yellow)">Projects</a></li>
+                <li><a href="#faq" style="color: var(--gdsc-red)">FAQ</a></li>
+                <li><a href="#register" class="nav-cta">Register Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Registration Open • Early Bird Ends Feb 20
+                </div>
+                <h1>
+                    Build the Future at <br>
+                    <span class="gradient-text">InnoHack 2026</span>
+                </h1>
+                <p class="hero-description">
+                    Join 500+ students from top colleges for 36 hours of intense innovation, mentorship, and building solutions that matter. Turn your ideas into startup-ready prototypes.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" style="color: var(--gdsc-red)">36</div>
+                        <div class="stat-label">Hours</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="color: var(--gdsc-blue)">₹5L+</div>
+                        <div class="stat-label">Prize Pool</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="color: var(--gdsc-green)">500+</div>
+                        <div class="stat-label">Participants</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" style="color: var(--gdsc-yellow)">5</div>
+                        <div class="stat-label">Tracks</div>
+                    </div>
+                </div>
+
+                <div class="cta-group">
+                    <a href="#register" class="btn btn-primary">
+                        Register Now - ₹400
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hacker Terminal Section -->
+    <div class="terminal-section">
+        <div class="terminal-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-btn close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                    <span class="terminal-title">innohack_terminal -- -zsh -- 80x24</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-output" id="terminalOutput">
+                        <div class="command-line">
+                            <span class="prompt">➜  ~</span> <span class="command">welcome</span>
+                        </div>
+                        <div class="response">
+                            Welcome to InnoHack 2026 Terminal v1.0.0<br>
+                            Type 'help' to see available commands or 'register' to join.
+                        </div>
+                    </div>
+                    <div class="command-line active">
+                        <span class="prompt">➜  ~</span> 
+                        <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown-section">
+        <div class="countdown-container">
+            <h3 class="countdown-title">⏰ Event Starts In</h3>
+            <div class="countdown-timer">
+                <div class="countdown-block">
+                    <div class="countdown-number" id="days" style="color: var(--gdsc-red)">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-block">
+                    <div class="countdown-number" id="hours" style="color: var(--gdsc-blue)">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-block">
+                    <div class="countdown-number" id="minutes" style="color: var(--gdsc-green)">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-block">
+                    <div class="countdown-number" id="seconds" style="color: var(--gdsc-yellow)">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Why InnoHack?</span>
+                <h2 class="section-title">More Than Just a Hackathon</h2>
+                <p class="section-subtitle">
+                    InnoHack 2026 is where passionate students transform ideas into impact. We provide the platform, mentorship, and resources you need to build something incredible.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Build Real Solutions</h3>
+                    <p class="feature-description">
+                        Work on problems that matter across HealthTech, EdTech, FinTech, Sustainability, and Open Innovation tracks. Create MVPs with real-world impact.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Learn from the Best</h3>
+                    <p class="feature-description">
+                        Get mentored by industry experts, startup founders, and tech leaders. Attend exclusive workshops on cutting-edge technologies and startup strategies.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">Network & Collaborate</h3>
+                    <p class="feature-description">
+                        Connect with 500+ like-minded students, potential co-founders, and industry professionals. Build relationships that last beyond the hackathon.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Win Big Rewards</h3>
+                    <p class="feature-description">
+                        Compete for ₹5+ Lakhs in prizes, internship opportunities, seed funding connections, and lifetime access to premium developer tools.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Startup Launchpad</h3>
+                    <p class="feature-description">
+                        Winners get direct access to VCs, incubator programs, and startup accelerators. Turn your hackathon project into a funded startup.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎓</div>
+                    <h3 class="feature-title">All Levels Welcome</h3>
+                    <p class="feature-description">
+                        First-time hacker? Experienced developer? Everyone's welcome. We provide beginner-friendly resources and advanced challenges for all skill levels.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Schedule</span>
+                <h2 class="section-title">Your 36-Hour Journey</h2>
+                <p class="section-subtitle">
+                    From ideation to MVP in just 36 hours. Here's what to expect at InnoHack 2026.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 20, 11:59 PM</div>
+                        <h3 class="timeline-title">🎯 Registration Deadline</h3>
+                        <p class="timeline-description">Last chance to register! Early bird pricing ends. Confirm your team and get ready to hack.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 15, 8:00 AM</div>
+                        <h3 class="timeline-title">☕ Check-in & Breakfast</h3>
+                        <p class="timeline-description">Collect your swag kit, network with fellow hackers, and fuel up for the journey ahead.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 15, 10:00 AM</div>
+                        <h3 class="timeline-title">🎤 Opening Ceremony</h3>
+                        <p class="timeline-description">Inspiring keynotes, problem statements revealed, sponsor intros, and team formation for solo hackers.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 15, 12:00 PM</div>
+                        <h3 class="timeline-title">💻 Hacking Begins!</h3>
+                        <p class="timeline-description">36 hours of intense building, mentorship sessions, technical workshops, unlimited coffee, and pizza!</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 16, 11:59 PM</div>
+                        <h3 class="timeline-title">⏰ Submission Deadline</h3>
+                        <p class="timeline-description">Final push! Submit your MVP, demo video, pitch deck, and source code. No late submissions accepted.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 16, 2:00 PM</div>
+                        <h3 class="timeline-title">🎯 Demos & Judging</h3>
+                        <p class="timeline-description">Present your solution to expert judges. Top 10 teams advance to finals for grand prize competition.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mar 16, 6:00 PM</div>
+                        <h3 class="timeline-title">🏆 Awards Ceremony</h3>
+                        <p class="timeline-description">Winners announced! Prize distribution, networking reception, and celebration of all the incredible work.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes -->
+    <section id="prizes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Rewards</span>
+                <h2 class="section-title">₹5+ Lakhs in Prizes</h2>
+                <p class="section-subtitle">
+                    Cash prizes, internships, startup funding opportunities, and premium tools for winners.
+                </p>
+            </div>
+
+            <div class="prizes-grid">
+                <div class="prize-card fade-in">
+                    <div class="prize-rank">🥇</div>
+                    <h3 class="prize-title">Grand Champion</h3>
+                    <div class="prize-amount">₹2,00,000</div>
+                    <div class="prize-features">
+                        <div class="prize-feature">Cash prize</div>
+                        <div class="prize-feature">Internship offers from sponsors</div>
+                        <div class="prize-feature">1-on-1 mentorship for 6 months</div>
+                        <div class="prize-feature">Direct access to VCs & accelerators</div>
+                        <div class="prize-feature">Premium swag & trophy</div>
+                    </div>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-rank">🥈</div>
+                    <h3 class="prize-title">Runner Up</h3>
+                    <div class="prize-amount">₹1,00,000</div>
+                    <div class="prize-features">
+                        <div class="prize-feature">Cash prize</div>
+                        <div class="prize-feature">Internship opportunities</div>
+                        <div class="prize-feature">3 months mentorship</div>
+                        <div class="prize-feature">Pro tool access (worth ₹50K)</div>
+                        <div class="prize-feature">Swag & trophy</div>
+                    </div>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-rank">🥉</div>
+                    <h3 class="prize-title">Second Runner Up</h3>
+                    <div class="prize-amount">₹50,000</div>
+                    <div class="prize-features">
+                        <div class="prize-feature">Cash prize</div>
+                        <div class="prize-feature">Mentorship opportunities</div>
+                        <div class="prize-feature">Pro tool access</div>
+                        <div class="prize-feature">Swag & certificate</div>
+                    </div>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-rank">⭐</div>
+                    <h3 class="prize-title">Best Innovation</h3>
+                    <div class="prize-amount">₹25,000</div>
+                    <div class="prize-features">
+                        <div class="prize-feature">Most creative solution</div>
+                        <div class="prize-feature">Pro tools & credits</div>
+                        <div class="prize-feature">Featured on our platform</div>
+                    </div>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-rank">🎨</div>
+                    <h3 class="prize-title">Best UI/UX</h3>
+                    <div class="prize-amount">₹25,000</div>
+                    <div class="prize-features">
+                        <div class="prize-feature">Outstanding design</div>
+                        <div class="prize-feature">Design tool subscriptions</div>
+                        <div class="prize-feature">Portfolio feature</div>
+                    </div>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-rank">❤️</div>
+                    <h3 class="prize-title">People's Choice</h3>
+                    <div class="prize-amount">₹25,000</div>
+                    <div class="prize-features">
+                        <div class="prize-feature">Community voted winner</div>
+                        <div class="prize-feature">Social media spotlight</div>
+                        <div class="prize-feature">Premium swag pack</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section id="projects" style="background: var(--gray-50);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Hall of Fame</span>
+                <h2 class="section-title">From Hack to Startup</h2>
+                <p class="section-subtitle">
+                    Past winning projects that turned into successful startups with real users and funding.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">🌍</div>
+                    <div class="project-body">
+                        <h3 class="project-title">EcoTrack</h3>
+                        <p class="project-description">
+                            AI-powered carbon footprint tracker that gamifies sustainable living. Now serving 50K+ users with ₹2Cr in seed funding.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                        <p class="project-meta">🏆 InnoHack 2024 Champion • IIT Bombay</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">🏥</div>
+                    <div class="project-body">
+                        <h3 class="project-title">MedConnect</h3>
+                        <p class="project-description">
+                            Telemedicine platform for rural healthcare using low-bandwidth video. Partnered with 200+ clinics nationwide.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WebRTC</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Flutter</span>
+                        </div>
+                        <p class="project-meta">🥈 InnoHack 2024 Runner Up • NIT Trichy</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">🤟</div>
+                    <div class="project-body">
+                        <h3 class="project-title">SignSpeak</h3>
+                        <p class="project-description">
+                            Real-time sign language translator using computer vision. Featured in TechCrunch and acquired by accessibility startup.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <p class="project-meta">⭐ Best Innovation 2024 • BITS Pilani</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">🌾</div>
+                    <div class="project-body">
+                        <h3 class="project-title">FarmWise</h3>
+                        <p class="project-description">
+                            IoT-based smart farming with soil sensors and yield optimization. Helping 1000+ farmers increase productivity by 40%.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                        <p class="project-meta">🏆 Best Impact 2024 • VIT Vellore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Success Stories</span>
+                <h2 class="section-title">What Students Say</h2>
+                <p class="section-subtitle">
+                    Hear from past participants who built incredible projects and launched successful careers.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">
+                        "InnoHack changed my life. In 36 hours, we built EcoTrack which is now a funded startup with 50K users. The mentorship and network I gained were invaluable. Best decision of my college career!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RP</div>
+                        <div class="author-info">
+                            <h4>Rahul Patel</h4>
+                            <p>Founder, <span class="company">EcoTrack</span> • IIT Bombay '24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">
+                        "The energy at InnoHack is unmatched. I met my co-founders here, learned cutting-edge tech from industry experts, and won ₹1 Lakh. Now we're building MedConnect full-time!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PK</div>
+                        <div class="author-info">
+                            <h4>Priya Krishnan</h4>
+                            <p>CTO, <span class="company">MedConnect</span> • NIT Trichy '24</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">
+                        "As a first-time hacker, I was nervous. But the supportive community, beginner workshops, and amazing mentors helped us build SignSpeak. We went from idea to working prototype in one weekend!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Arjun Sharma</h4>
+                            <p>ML Engineer, <span class="company">SignSpeak</span> • BITS Pilani '24</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Everything you need to know about InnoHack 2026. Can't find your answer? Contact us!
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Who can participate in InnoHack 2026?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Any college student from any discipline can participate! Whether you're studying CS, design, business, or any other field—if you're passionate about innovation, you're welcome. Teams can have 1-4 members. No age limit, just bring your student ID.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        I'm a complete beginner. Can I still participate?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! We welcome hackers of all skill levels. We'll have beginner-friendly workshops, dedicated mentors for first-timers, starter kits, and resources to help you learn. Many past winners were first-time hackers. Everyone starts somewhere—InnoHack is the perfect place!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        What should I bring to the event?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Bring your laptop, chargers, valid student ID, any hardware you want to use, comfortable clothes, and your creativity! We'll provide all meals, unlimited drinks, sleeping bags, WiFi, workstations, and swag. Just bring yourself and your ideas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Can I work on an existing project?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No, all projects must be built from scratch during the 36-hour hackathon. However, you can use existing libraries, APIs, frameworks, and open-source tools. The core idea and implementation must be new. We check timestamps and have strict plagiarism detection.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        What's included in the ₹400 registration fee?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Everything! You get: 36-hour venue access, all meals & unlimited caffeine, official InnoHack swag kit & T-shirt, certificate of participation, access to all workshops & mentorship, networking opportunities, eligibility for ₹5L+ prizes, and post-event community access.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Is there a refund policy?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Full refunds available until Feb 10, 2026. After Feb 10, registration fees are non-refundable as we finalize catering, swag, and venue. However, you can transfer your registration to another team member or friend until Feb 20.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        How do I find teammates?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Join our Discord, WhatsApp, or Telegram communities (links in footer) to connect with other participants! We'll also have an official team formation session during the opening ceremony. Come solo, leave with lifelong friends and co-founders!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        Are there travel reimbursements?
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Limited travel reimbursements available for participants from outside Hyderabad. Priority given to top talent from far locations. Details shared with registered teams on a case-by-case basis. We also help arrange group transportation from major cities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="register" class="registration-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">Join Us</span>
+                <h2 class="section-title">Register for InnoHack 2026</h2>
+                <p class="section-subtitle">
+                    Secure your spot now! Early bird pricing ends Feb 20, 2026.
+                </p>
+            </div>
+
+            <div class="form-container fade-in">
+                <div class="price-badge">
+                    <div class="price-original">Regular: ₹500</div>
+                    <div class="price-current">₹400</div>
+                    <div class="price-label">Early Bird Special • Save ₹100 🎉</div>
+                </div>
+
+                <form id="registrationForm">
+                    <div class="form-progress">
+                        <div class="progress-dot active"></div>
+                        <div class="progress-dot"></div>
+                        <div class="progress-dot"></div>
+                        <div class="progress-dot"></div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-header">
+                            <h3>Personal Information</h3>
+                            <p>Let's start with your basic details</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" required placeholder="your.email@college.edu">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" required placeholder="+91 98765 43210">
+                        </div>
+
+                        <div class="form-group">
+                            <label>College/University *</label>
+                            <input type="text" required placeholder="Your institution name">
+                        </div>
+
+                        <div class="form-navigation">
+                            <div></div>
+                            <button type="button" class="btn btn-primary" onclick="nextStep(2)">
+                                Next Step →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-step" id="step2">
+                        <div class="form-header">
+                            <h3>Team Details</h3>
+                            <p>Tell us about your team (1-4 members)</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Team Name *</label>
+                            <input type="text" required placeholder="Your awesome team name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Team Size *</label>
+                            <select required>
+                                <option value="">Select team size</option>
+                                <option value="1">Solo (Just me!)</option>
+                                <option value="2">Duo (2 members)</option>
+                                <option value="3">Trio (3 members)</option>
+                                <option value="4">Squad (4 members)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Team Members Email IDs (if any)</label>
+                            <textarea rows="4" placeholder="member2@college.edu&#10;member3@college.edu&#10;member4@college.edu"></textarea>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" onclick="nextStep(1)">
+                                ← Back
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep(3)">
+                                Next Step →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="form-step" id="step3">
+                        <div class="form-header">
+                            <h3>Technical Profile</h3>
+                            <p>Help us understand your interests and skills</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Problem Track *</label>
+                            <select required>
+                                <option value="">Choose your track</option>
+                                <option value="health">🏥 HealthTech - Healthcare & Wellness</option>
+                                <option value="ed">📚 EdTech - Education & Learning</option>
+                                <option value="fin">💰 FinTech - Finance & Payments</option>
+                                <option value="sustainability">🌱 Sustainability - Green Tech</option>
+                                <option value="open">🚀 Open Innovation - Surprise Us!</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Technical Skills</label>
+                            <input type="text" placeholder="e.g., React, Python, ML, UI/UX Design, Flutter">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Experience Level *</label>
+                            <select required>
+                                <option value="">Select your level</option>
+                                <option value="beginner">🌱 Beginner (First hackathon!)</option>
+                                <option value="intermediate">💪 Intermediate (1-3 hackathons)</option>
+                                <option value="advanced">🚀 Advanced (4+ hackathons)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Why do you want to join InnoHack 2026?</label>
+                            <textarea rows="4" placeholder="Share what excites you about this hackathon..."></textarea>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" onclick="nextStep(2)">
+                                ← Back
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep(4)">
+                                Next Step →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="form-step" id="step4">
+                        <div class="form-header">
+                            <h3>Confirm & Pay</h3>
+                            <p>You're almost there! Review and complete registration</p>
+                        </div>
+
+                        <div style="background: var(--gray-50); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
+                            <h4 style="font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 16px;">What's Included:</h4>
+                            <div style="display: grid; gap: 12px;">
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> 36-hour hackathon access
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> All meals & unlimited caffeine
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> InnoHack swag kit & official T-shirt
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> Expert mentorship & workshops
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> Networking with 500+ students
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> Eligibility for ₹5L+ prizes
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                    <span style="color: var(--success);">✓</span> Certificate of participation
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" onclick="nextStep(3)">
+                                ← Back
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                Complete Registration - ₹400 →
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+
+            <h2>Ready to Build the Future?</h2>
+            <p>Join 500+ students and turn your ideas into reality at InnoHack 2026</p>
+            <div class="cta-group">
+                <a href="#register" class="btn btn-primary">
+                    Register Now - ₹400
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>InnoHack 2026</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 16px; line-height: 1.6;">
+                    Building tomorrow's solutions today. A 36-hour journey where innovation meets impact. March 15-16, 2026.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About InnoHack</a></li>
+                    <li><a href="#timeline">Event Timeline</a></li>
+                    <li><a href="#prizes">Prizes & Rewards</a></li>
+                    <li><a href="#projects">Past Projects</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#register">Register Now</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Discord Server</a></li>
+                    <li><a href="#">WhatsApp Group</a></li>
+                    <li><a href="#">Telegram Channel</a></li>
+                    <li><a href="#">Twitter Updates</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:hello@innohack2026.com">hello@innohack2026.com</a></li>
+                    <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                    <li><a href="#">Code of Conduct</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 InnoHack. All rights reserved. Made with ❤️ by student innovators for student innovators.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="js/script.js?v=3"></script>
+</body>
+</html>
